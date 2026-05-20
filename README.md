@@ -1,17 +1,17 @@
-# 🇹🇷 Türkçe Morfolojik Çözümleme (Morphological Disambiguation)
+#  Morfolojik Çözümleme (Morphological Disambiguation)
 
 Bursa Teknik Üniversitesi — Bilgisayar Mühendisliği Bölümü  
-**Doğal Dil İşleme (NLP) Dersi Projesi** | 2025-2026 Bahar Dönemi
+**Doğal Dil İşleme (NLP) Dersi Projesi
 
 ---
 
-## 📌 Proje Hakkında
+##  Proje Hakkında
 
 Türkçe gibi sondan eklemeli (agglutinative) dillerde bir kelime birden fazla morfolojik çözümlemeye sahip olabilir. Örneğin **"yüz"** kelimesi isim (sayı), sıfat (yüz ifadesi) veya fiil (yüzmek) olarak çözümlenebilir.
 
 Bu proje, verilen Türkçe cümlelerdeki her kelimenin bağlamına uygun **doğru morfolojik analizini** (kök, kelime türü, ek bilgisi) otomatik olarak belirleyen bir sistem geliştirmeyi amaçlamaktadır.
 
-## 🏗️ Proje Yapısı
+## Proje Yapısı
 
 ```
 ├── src/
@@ -31,7 +31,7 @@ Bu proje, verilen Türkçe cümlelerdeki her kelimenin bağlamına uygun **doğr
 └── README.md
 ```
 
-## 📊 Veri Seti
+##  Veri Seti
 
 Tüm işaretlemeler **Universal Dependencies (UD)** standartlarında CoNLL-U formatında yapılmıştır.
 
@@ -49,7 +49,7 @@ Tüm işaretlemeler **Universal Dependencies (UD)** standartlarında CoNLL-U for
 | Sayı | 792 | 500 | 480 | 145 | 135 | 65 | 38 | 25 | 19 |
 | Oran | %36.0 | %22.7 | %21.8 | %6.6 | %6.1 | %3.0 | %1.7 | %1.1 | %0.9 |
 
-## ⚙️ Yöntem
+##  Yöntem
 
 ### Özellik Çıkarımı
 Her token için toplam **323 özellik** üretilmiştir. Bağlamsal pencere yöntemi (window size = 2) kullanılarak hedef kelimenin kendisi ve ±2 komşu kelimesinin bilgileri birleştirilmiştir.
@@ -65,7 +65,7 @@ Her token için toplam **323 özellik** üretilmiştir. Bağlamsal pencere yönt
 ### Zemberek Entegrasyonu
 [Zemberek](https://github.com/ahmetaa/zemberek-nlp), Türkçe için geliştirilmiş açık kaynaklı bir NLP kütüphanesidir. Her kelime için olası tüm morfolojik çözümlemeleri üretir; sistem bu adaylar arasında bağlamsal bilgiyi kullanarak doğru olanı seçer.
 
-## 🤖 Modeller
+## Modeller
 
 | Model | Tür | Parametreler | Avantaj | Dezavantaj |
 |---|---|---|---|---|
@@ -74,7 +74,7 @@ Her token için toplam **323 özellik** üretilmiştir. Bağlamsal pencere yönt
 | **Logistic Regression** | Doğrusal | C=1.0, L-BFGS | Yorumlanabilir | Doğrusal sınır |
 | **HMM** | Dizilim Modeli | Geçiş + Emisyon | Dizilim bilgisi | Kelime bazlı |
 
-## 📈 Sonuçlar
+## Sonuçlar
 
 | Model | Accuracy | Precision (Macro) | Recall (Macro) | F1-Score (Macro) |
 |---|---|---|---|---|
@@ -83,7 +83,7 @@ Her token için toplam **323 özellik** üretilmiştir. Bağlamsal pencere yönt
 | Logistic Regression | %89.5 | 0.770 | 0.666 | 0.704 |
 | **HMM** | **%99.6** | **0.996** | **0.943** | **0.960** |
 
-> 🏆 **En iyi sonuç: HMM modeli** — %99.6 accuracy, 0.960 F1-Score
+>  **En iyi sonuç: HMM modeli** — %99.6 accuracy, 0.960 F1-Score
 
 ### HMM Sınıf Bazında Sonuçlar
 
@@ -99,7 +99,7 @@ Her token için toplam **323 özellik** üretilmiştir. Bağlamsal pencere yönt
 | PUNCT | 1.000 | 1.000 | 1.000 | 100 |
 | VERB | 1.000 | 0.989 | 0.995 | 93 |
 
-## 🚀 Kurulum ve Çalıştırma
+## Kurulum ve Çalıştırma
 
 ```bash
 # Repoyu klonla
@@ -116,14 +116,14 @@ python src/train.py
 python src/evaluate.py
 ```
 
-## 🔮 Gelecek Çalışmalar
+## Gelecek Çalışmalar
 
 - UD Turkish-IMST gibi büyük ölçekli gerçek corpus'lar ile eğitim
 - CRF (Conditional Random Fields) modeli eklenmesi
 - Zemberek ile gerçek aday çözümleme üretimi
 - Derin öğrenme modelleri (BiLSTM-CRF, BERT) denemesi
 
-## 📚 Kaynakça
+##  Kaynakça
 
 1. Jurafsky, D., & Martin, J.H. (2024). *Speech and Language Processing* (3rd ed.). Stanford University.
 2. Oflazer, K. (1994). *Two-level Description of Turkish Morphology*. Literary and Linguistic Computing, 9(2).
@@ -134,7 +134,7 @@ python src/evaluate.py
 7. [Universal Dependencies Turkish Treebank](https://universaldependencies.org/treebanks/tr_imst/)
 8. Pedregosa et al. (2011). *scikit-learn: Machine Learning in Python*. JMLR 12.
 
-## 📝 Lisans
+##  Lisans
 
 Bu proje akademik amaçlı geliştirilmiştir.
 
