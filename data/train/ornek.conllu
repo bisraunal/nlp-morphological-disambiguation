@@ -1,0 +1,25 @@
+# text = Dün akşam toplantıdan erken çıkan öğrencinin notları düşüktü.
+1	Dün	dün	ADV	Adv	_
+2	akşam	akşam	ADV	Adv	_
+3	toplantıdan	toplantı	NOUN	Noun	Case=Abl|Number=Sing|Person=3
+4	erken	erken	ADV	Adv	_
+5	çıkan	çık	VERB	Verb	Polarity=Pos|VerbForm=Part
+6	öğrencinin	öğrenci	NOUN	Noun	Case=Gen|Number=Sing|Person=3
+7	notları	not	NOUN	Noun	Case=Nom|Number=Plur|Person=3
+8	düşüktü	düşük	ADJ	Adj	_
+9	.	.	PUNCT	Punct	_
+
+# text = Küçük çocuk parkta oynuyordu.
+1	Küçük	küçük	ADJ	Adj	_
+2	çocuk	çocuk	NOUN	Noun	Case=Nom|Number=Sing|Person=3
+3	parkta	park	NOUN	Noun	Case=Loc|Number=Sing|Person=3
+4	oynuyordu	oyna	VERB	Verb	Aspect=Prog|Tense=Past|Person=3
+5	.	.	PUNCT	Punct	_
+
+# text = Bu kitabı daha önce okumuştum.
+1	Bu	bu	DET	Det	_
+2	kitabı	kitap	NOUN	Noun	Case=Acc|Number=Sing|Person=3
+3	daha	daha	ADV	Adv	_
+4	önce	önce	ADV	Adv	_
+5	okumuştum	oku	VERB	Verb	Aspect=Perf|Tense=PQP|Person=1
+6	.	.	PUNCT	Punct	_
